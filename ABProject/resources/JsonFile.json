@@ -1,0 +1,22 @@
+[
+    {
+        "testCaseStatus": "NO",
+        "testCaseName": "TestCaseOne",
+        "retry": 1
+    },
+    {
+        "testCaseStatus": "Yes",
+        "testCaseName": "TestCaseTwo",
+        "retry": 1
+    },
+    {
+        "testCaseStatus": "NO",
+        "testCaseName": "TestCaseThree",
+        "retry": 1
+    },
+    {
+        "testCaseStatus": "Yes",
+        "testCaseName": "TestCaseFour",
+        "retry": 2
+    }
+]
