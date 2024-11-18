@@ -18,6 +18,7 @@ Configuration Management:
                       Uses a data.properties file for managing configurable parameters like file paths, retry counts, and email settings.
 
 **Technologies Used**
+
 Java
 
 TestNG
