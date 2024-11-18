@@ -1,22 +1,21 @@
 **Automation Framework with TestNG**
-**Overview
-**
+**Overview**
 This project automates the execution of test cases based on data from an Excel sheet. It integrates dynamic test execution with TestNG's features, including retry logic, listeners, and Extent Reports, along with additional functionalities like email notifications and externalized configurations.
 
 **Features**
 
 Dynamic XML Generation: 
-Reads test case data (status: yes or no, retry count) from an Excel file to create TestNG XML dynamically.
+                      Reads test case data (status: yes or no, retry count) from an Excel file to create TestNG XML dynamically.
 Retry Mechanism:
-Implements a global retry logic for failed test cases using a custom RetryAnalyzer.
+                      Implements a global retry logic for failed test cases using a custom RetryAnalyzer.
 ITestListener: 
-Enhances test execution monitoring with custom ITestListener for tracking test case status.
+                      Enhances test execution monitoring with custom ITestListener for tracking test case status.
 Extent Reports: 
-Generates comprehensive, visually appealing reports for test execution results.
+                      Generates comprehensive, visually appealing reports for test execution results.
 Email Integration:
-Sends test execution result report  to HTMLEmail via email.
+                      Sends test execution result report  to HTMLEmail via email.
 Configuration Management:
-Uses a data.properties file for managing configurable parameters like file paths, retry counts, and email settings.
+                      Uses a data.properties file for managing configurable parameters like file paths, retry counts, and email settings.
 
 **Technologies Used **
 Java
