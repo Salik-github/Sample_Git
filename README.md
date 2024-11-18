@@ -19,10 +19,15 @@ Configuration Management:
 
 **Technologies Used**
 Java
+
 TestNG
+
 Apache POI (for Excel handling)
+
 Extent Reports
+
 HTMLEmail
+
 
 **Project Structure**
 src/test/java: Contains all core logic, including Excel handling, dynamic XML generation, TestNG test cases, listener implementations, and utility classes.
