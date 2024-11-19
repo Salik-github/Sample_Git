@@ -15,7 +15,7 @@ public class SendEmailClass
         em.setHostName(Obj.GetDataFromPropertiesFile("EmailHostName"));
         em.setSmtpPort( Integer.parseInt(Obj.GetDataFromPropertiesFile("SmtpPort")));
 
-        em.setAuthenticator(new DefaultAuthenticator(Obj.GetDataFromPropertiesFile("SenderEmail"), "epllztnzsfwzeuqh"));
+        em.setAuthenticator(new DefaultAuthenticator(Obj.GetDataFromPropertiesFile("SenderEmail"), ""));
         em.setSSLOnConnect(true);
         em.setFrom(Obj.GetDataFromPropertiesFile("SenderEmail"));
         em.setSubject(Obj.GetDataFromPropertiesFile("EmailSubject"));
