@@ -3,12 +3,16 @@ package ABProject;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import static ABProject.Utils.ExtentReportFile;
 
 public class ExtentReportsClass {
      ExtentReports extentReports;
      ExtentSparkReporter extentSparkReporter;
+
+
+
     public void Created() {
             extentSparkReporter = new ExtentSparkReporter(ExtentReportFile);
             extentSparkReporter.config().setTheme(Theme.STANDARD);

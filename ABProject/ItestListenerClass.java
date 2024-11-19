@@ -1,9 +1,12 @@
 package ABProject;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+
+import java.sql.DriverManager;
 
 
 public class ItestListenerClass extends ExtentReportsClass implements ITestListener {
@@ -26,7 +29,12 @@ public class ItestListenerClass extends ExtentReportsClass implements ITestListe
 
     @Override
     public void onTestFailure(ITestResult result) {
-        extentTest.get().log(Status.FAIL, result.getName() + " - This Test Failed");
+        WebDriver driver =   DriverManagerC.getDriver();
+        ExtentTest test = extentTest.get();
+        test.log(Status.FAIL, result.getName() + " - This Test Failed");
+        String scrrrenpath  = ScreenShot.takeScreenshot(driver, result.getMethod().getMethodName());
+        test.addScreenCaptureFromPath(scrrrenpath);
+
     }
 
 
@@ -47,7 +55,7 @@ public class ItestListenerClass extends ExtentReportsClass implements ITestListe
         SendEmailClass oc = new SendEmailClass();
         try {
             System.out.println("Email send ");
-           // oc.ExtentReportSendViaEmail();
+            oc.ExtentReportSendViaEmail();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

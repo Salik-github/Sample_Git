@@ -12,6 +12,7 @@ public class TestCaseClass extends ExtentReportsClass {
 
     public WebDriver GetDesireTestMethod(String URL) {
         WebDriver driver = new ChromeDriver();
+        DriverManagerC.SetDriver(driver);
         driver.get(URL);
         return driver;
     }
@@ -44,7 +45,7 @@ public class TestCaseClass extends ExtentReportsClass {
     public void TestCaseTwo() {
         WebDriver driver = GetDesireTestMethod("https://www.demoabroadedu.gaipp.com/signin");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3000));
-        Assert.assertEquals("https://www.demoabroadedu.gaipp.com/signin", driver.getCurrentUrl());
+        Assert.assertEquals("https://www.demoabroadedu.gaipp.com/sign", driver.getCurrentUrl());
         driver.close();
     }
 
@@ -52,7 +53,7 @@ public class TestCaseClass extends ExtentReportsClass {
     public void TestCaseThree() {
         WebDriver driver = GetDesireTestMethod("https://demoenterprise.gaipp.com/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3000));
-        Assert.assertEquals("https://demoenterprise.gaipp.com/signin", driver.getCurrentUrl());
+        Assert.assertEquals("https://demoenterprise.gaipp.com/signn", driver.getCurrentUrl());
         driver.close();
     }
 
@@ -68,6 +69,12 @@ public class TestCaseClass extends ExtentReportsClass {
         {
             Assert.assertTrue(true);
         }
+    }
+
+    @AfterSuite
+    public  void  Closedriver()
+    {
+        DriverManagerC.removeDriver();
     }
 
 }

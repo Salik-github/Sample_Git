@@ -5,6 +5,7 @@ import org.testng.xml.XmlClass;
 import org.testng.xml.XmlInclude;
 import org.testng.xml.XmlSuite;
 import org.testng.xml.XmlTest;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
@@ -14,8 +15,8 @@ import java.util.Map;
 
 import static ABProject.FileGetData.*;
 
-
-public class MainMethod
+ 
+ public class MainMethod
 {
    // public  static  void main(String [] args) throws Exception {
     @Test
@@ -32,6 +33,7 @@ public class MainMethod
 
         XmlSuite xmlSuite = new XmlSuite();
         xmlSuite.setName("SuiteOne");
+    
         xmlSuite.setParallel(XmlSuite.ParallelMode.METHODS);    /*used for the parallel test run*/
         xmlSuite.setVerbose(4);
 
@@ -63,6 +65,7 @@ public class MainMethod
 
         xmlTest.setXmlClasses(List.of(xmlClass));
         testNG.setXmlSuites(List.of(xmlSuite));
+    
 
         testNG.run();
 
