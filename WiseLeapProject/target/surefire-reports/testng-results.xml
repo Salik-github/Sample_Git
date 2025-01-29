@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-01-29T18:30:13 IST" name="Surefire suite" finished-at="2025-01-29T18:30:21 IST" duration-ms="7518">
+    <groups>
+    </groups>
+    <test started-at="2025-01-29T18:30:13 IST" name="Surefire test" finished-at="2025-01-29T18:30:21 IST" duration-ms="7518">
+      <class name="com.project.tests.testSuite">
+        <test-method is-config="true" signature="setBrowser()[pri:0, instance:com.project.tests.testSuite@7f416310]" started-at="2025-01-29T18:30:06 IST" name="setBrowser" finished-at="2025-01-29T18:30:13 IST" duration-ms="6662" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBrowser -->
+        <test-method is-config="true" signature="createObj()[pri:0, instance:com.project.tests.testSuite@7f416310]" started-at="2025-01-29T18:30:13 IST" name="createObj" finished-at="2025-01-29T18:30:13 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createObj -->
+        <test-method signature="loginWithMobileNumber()[pri:0, instance:com.project.tests.testSuite@7f416310]" started-at="2025-01-29T18:30:13 IST" name="loginWithMobileNumber" finished-at="2025-01-29T18:30:21 IST" duration-ms="7432" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithMobileNumber -->
+      </class> <!-- com.project.tests.testSuite -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

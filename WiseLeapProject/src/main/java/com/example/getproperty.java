@@ -1,6 +1,7 @@
 package com.example;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Properties;
 
 import com.example.filepath.filespath;
@@ -14,7 +15,7 @@ public class getproperty {
 
         try {
             properties.load(new FileInputStream(filespath.PROPERTY_FILE));
-        } catch (Exception e) {
+        } catch (IOException e) {
           
             System.out.println(e + "Exception throw from property file");
         } 
