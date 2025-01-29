@@ -31,9 +31,7 @@ public class homepage extends basepage {
         clickElement(className);
     }
 
-    private void verifyclassHeadingVisible()
-
-    {
+    private void verifyclassHeadingVisible() {
         WebElement checkvisible = driver.findElement(classHeading);
         Assert.assertTrue(checkvisible.isDisplayed(), "Classroom is opened Successfully");
     }
