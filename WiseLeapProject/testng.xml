@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="/home/prakashni/Documents/Sample_Git/WiseLeapProject/src/test/java/com/project/tests/testSuite.java">
+        <classes>
+            <class name="com.project.tests.testSuite">
+                <methods>
+                    <include name="loginWithMobileNumber"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
