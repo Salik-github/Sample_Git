@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6274e609-a040-4e0f-b61e-f2f1d02d2508" name="Changes" comment="final">
+      <change afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/browserType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/browserType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/driverManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/driverManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/filepath/filespath.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/filepath/filespath.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/getproperty.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/getproperty.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/resources/data.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/project/pages/classroompage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/project/pages/classroompage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/project/pages/login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/project/pages/login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/project/tests/testSuite.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/project/tests/testSuite.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Salik-Mo"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:Salik-github/Sample_Git.git",
+    "accountId": "b3cb5c73-d6c0-458b-8302-4eeed6f260bd"
+  }
+}]]></component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2sKq93jiG1EeezSeV8ZpvR36yLA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "TestNG./home/prakashni/Documents/Sample_Git/WiseLeapProject/testng.xml.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/prakashni/Documents/Sample_Git/WiseLeapProject"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="/home/prakashni/Documents/Sample_Git/WiseLeapProject/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="wiseleaptechnologiesproject" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG./home/prakashni/Documents/Sample_Git/WiseLeapProject/testng.xml" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6274e609-a040-4e0f-b61e-f2f1d02d2508" name="Changes" comment="" />
+      <created>1738214459176</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1738214459176</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="final" />
+    <option name="LAST_COMMIT_MESSAGE" value="final" />
+  </component>
+</project>
