@@ -1,4 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: com.project.tests.testSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.915 s - in com.project.tests.testSuite
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 17.664 s <<< FAILURE! - in com.project.tests.testSuite
+loginWithMobileNumber(com.project.tests.testSuite)  Time elapsed: 12.094 s  <<< FAILURE!
+org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: stale element not found in the current frame
+  (Session info: chrome=132.0.6834.110)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.26.0', revision: '8ccf0219d7'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-130-generic', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0f2d4956f14f8564dda934fcf4c7db6f, clickElement {id=f.53071E8EDAA70CAFB953D0A70FEE8F24.d.958ABF052252B4E69E98664673194EB2.e.127}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.110, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41967}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:41967/devtoo..., se:cdpVersion: 132.0.6834.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (0f2d4956f14f8564dda934fcf4c7db6f)] -> css selector: a[href='#livesessions']]
+Session ID: 0f2d4956f14f8564dda934fcf4c7db6f
+	at com.project.tests.testSuite.loginWithMobileNumber(testSuite.java:29)
+
