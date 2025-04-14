@@ -13,3 +13,4 @@ com\frameworks\drivers\BrowserFactory$4.class
 com\frameworks\helpers\pojoForSignupdata.class
 com\frameworks\helpers\SystemHelper.class
 com\frameworks\drivers\DriverManager.class
+com\frameworks\keywords\WebUI$1.class

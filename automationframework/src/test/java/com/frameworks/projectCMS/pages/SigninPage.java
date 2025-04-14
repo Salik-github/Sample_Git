@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.frameworks.helpers.JsonHelper;
-import com.frameworks.helpers.pojoForSignupdata;
 
 import static com.frameworks.keywords.WebUI.*;
 
@@ -52,6 +51,7 @@ public class SigninPage {
             enterpassword(user.get("password").asText());
             clickSignin();
         }
+        //Remember me  
     
 
 }

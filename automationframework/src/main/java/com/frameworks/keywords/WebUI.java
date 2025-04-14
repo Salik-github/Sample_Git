@@ -3,8 +3,11 @@ package com.frameworks.keywords;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -49,6 +52,8 @@ public class WebUI {
         wait.until(ExpectedConditions.visibilityOf(BytoWebElement_forEnterData(by)));
     }
 
+  
+
     public static void waitForElementclickable(By by) {
         WebElement element = BytoWebElement_forEnterData(by);
         WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(),
@@ -73,6 +78,29 @@ public class WebUI {
         WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(),
         Duration.ofSeconds(DurationStringtoLong(FrameworkConstants.WAIT)));
         wait.until(ExpectedConditions.urlContains(URL));
+    }
+    public static void waitForPageLoad()
+    {
+        WebDriver driver = DriverManager.getDriver();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(DurationStringtoLong(FrameworkConstants.WAIT)));
+        try{
+            wait.until(new ExpectedCondition<Boolean>(){
+
+                @Override
+                public Boolean apply(WebDriver driver) {
+                    String readState = ((JavascriptExecutor) driver).executeScript("return document.readyState").toString();
+
+                    return "complete".equals(readState);
+                }
+
+            });
+
+            }
+        
+        catch(Exception e)
+        {
+            System.out.println("Page Load TimeOut");
+        }
     }
 
 }

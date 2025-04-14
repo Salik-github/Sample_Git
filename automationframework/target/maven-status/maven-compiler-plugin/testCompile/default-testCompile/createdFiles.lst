@@ -8,4 +8,3 @@ com\frameworks\projectCMS\testcases\SigninTest.class
 com\frameworks\Reports\ExtentManager.class
 com\frameworks\common\BaseTest.class
 com\testingPropse\ja.class
-com\frameworks\Reports\Report_One.xlxs.html

@@ -9,5 +9,12 @@
       <class name="com.frameworks.projectCMS.testcases.SignupTest"/>
     </classes>
   </test>
+  <test name="RunMethodSignin">
+    <parameter name="appURL" value="signin"></parameter>
+    <classes>
+      <class name="com.frameworks.projectCMS.testcases.SigninTest"/>
+    </classes>
+  </test>
+
 
 </suite>
