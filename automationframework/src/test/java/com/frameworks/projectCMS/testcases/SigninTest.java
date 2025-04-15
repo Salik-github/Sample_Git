@@ -15,4 +15,22 @@ public class SigninTest extends BaseTest{
         signinPage.validDataLogin();
         //signinPage.
     }
+    @Test (priority= 2 , description= "Login with invalid email")
+    public void testWithInvalidEmail()
+    {
+        SigninPage signinPage = new SigninPage(DriverManager.getDriver());
+        signinPage.invalidEmail();
+    }
+    @Test(priority = 3 , description = "navigate to forgotpassword page")
+    public  void navigateToforgotPasswordPage()
+    {
+        SigninPage signinPage = new SigninPage(DriverManager.getDriver());
+        signinPage.navigateToforgotPassword();
+    }
+    @Test (priority=4 , description = "Check Login loading time ")
+    public  void checkLoginLoadTime()
+    {
+        SigninPage signinPage = new SigninPage(DriverManager.getDriver());
+        signinPage.calculateLoginTime();
+    }
 }
