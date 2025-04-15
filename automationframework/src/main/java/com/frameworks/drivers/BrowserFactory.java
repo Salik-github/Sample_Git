@@ -24,6 +24,7 @@ public enum BrowserFactory {
         public ChromeOptions getOptions() {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--disable-extensions");
+            options.addArguments("--headless");
             options.addArguments("--disable-inforbars");
             options.addArguments("--disable-notifications");
             options.addArguments("--remote-allow-origins=*");

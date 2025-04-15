@@ -82,7 +82,7 @@ public class SigninPage {
         long startTime = SystemHelper.getCurrentTimeMillies();
         validDataLogin();
         long endTime = SystemHelper.getCurrentTimeMillies();
-        Assert.assertTrue(endTime - startTime < 3000);
+        Assert.assertTrue(endTime - startTime < 1);
     }
 
 }

@@ -6,7 +6,10 @@ import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.frameworks.Reports.ExtentManager;
+
+import static com.frameworks.keywords.WebUI.*;
 
 public class TestListener implements ITestListener {
     
@@ -28,7 +31,14 @@ public class TestListener implements ITestListener {
     public void onTestFailure(ITestResult result)
     {
         test.get().fail(result.getThrowable());
+        String ScreenshotPath = CaptureScreenShotWhentestfail(result.getMethod().getMethodName());
+        System.out.println(ScreenshotPath);
+        String ScreenshotPath1 = "src/test/java/com/frameworks/Reports/ScreenShot/checkLoginLoadTime.png";
+      
+        test.get().fail(  MediaEntityBuilder.createScreenCaptureFromPath(ScreenshotPath1).build());//.addScreenCaptureFromPath(ScreenshotPath1 ,"Screenshot on failure");
+        //src\test\java\com\frameworks\Reports\ScreenShot\checkLoginLoadTime.png
     }
+
     @Override
     public void onTestSkipped(ITestResult result)
     {

@@ -5,6 +5,7 @@ import com.frameworks.helpers.PropertiesHelpers;
 public class FrameworkConstants {
 
     public static String FORGOT_PASSWORD_URL = "https://rise.anhtester.com/signin/request_reset_password";
+    public static String SCREENSHOT_FILE = "src/test/java/com/frameworks/Reports/ScreenShot";
 
     public static String JSON_PATH = "src/test/java/com/resources/config/userData.json";
     public static final String REPORT_LOCATION ="src/test/java/com/frameworks/Reports/Report_One.xlxs";

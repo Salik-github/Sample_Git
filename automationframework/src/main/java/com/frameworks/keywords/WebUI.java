@@ -1,9 +1,14 @@
 package com.frameworks.keywords;
 
+import java.io.File;
 import java.time.Duration;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.poi.ss.formula.functions.T;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -101,6 +106,21 @@ public class WebUI {
         {
             System.out.println("Page Load TimeOut");
         }
+    }
+    public static String CaptureScreenShotWhentestfail(String TestCaseName)
+    {
+        TakesScreenshot ts= (TakesScreenshot) DriverManager.getDriver();
+        File file = ts.getScreenshotAs(OutputType.FILE);
+        String filepath = FrameworkConstants.SCREENSHOT_FILE+ "/" +TestCaseName+ ".png";
+        File screenshotFile = new File(filepath);
+        try{
+            FileUtils.copyFile(file, screenshotFile);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return screenshotFile.getAbsolutePath();
     }
 
 }
