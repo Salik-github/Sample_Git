@@ -4,7 +4,6 @@ import java.io.File;
 import java.time.Duration;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.poi.ss.formula.functions.T;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -92,7 +91,7 @@ public class WebUI {
             wait.until(new ExpectedCondition<Boolean>(){
 
                 @Override
-                public Boolean apply(WebDriver driver) {
+                   public Boolean apply(WebDriver driver) {
                     String readState = ((JavascriptExecutor) driver).executeScript("return document.readyState").toString();
 
                     return "complete".equals(readState);
