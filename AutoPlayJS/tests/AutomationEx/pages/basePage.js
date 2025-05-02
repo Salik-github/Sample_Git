@@ -56,9 +56,19 @@ export default class BasePage {
     }
     async verifyUrl(url)
     {
- 
     const currentURL = this.getUrl()
     return this.expectMethod(currentURL,url)
+    }
+    async verifyElementEnable(locator,ErrorMessage)
+    {
+        const element = this.page.locator(locator);
+        try{
+            const isEnable = await element.isEnabled();
+            expect(isEnable).toBeTruthy();
+        }catch(error)    
+        {
+            throw new Error(`${ErrorMessage}`)
+        }
     }
 
 }
