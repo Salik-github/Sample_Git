@@ -4,4 +4,6 @@ export const  password = '#password';
 export const loginButton = '#login-button';
 export const login_credentials  ='#login_credentials';
 export const password_creadentials = '.login_password'; 
-
+export const ErrorMessageforUserName  ='Epic sadface: Username is required'
+export const ErrorMessageforPassword  ='Epic sadface: Password is required'
+export const WrongCredentials ='Epic sadface: Username and password do not match any user in this service'

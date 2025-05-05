@@ -25,4 +25,14 @@ export default class LoginPage extends BasePage {
     {
         await this.verifyElementEnable(locator,testData.notEnabledText);
     }
+
+    async verifyErrorMessageDisplay(selector)
+    {
+        await this.verifyTextisVisible(selector);
+    }
+    async FillData(selector, text)
+    {
+        await this.waitAndFill(selector,text)
+    }
+    
 }

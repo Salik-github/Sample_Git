@@ -30,21 +30,31 @@ export default class BasePage {
     }
     async clickMethod(selector)
     {
+
         return  await this.page.click(selector);
     }
     async waitAndFill(selector , content)
     {
+
         return  await this.page.fill(selector,content);
     }
     async  keypress(selector ,Key)
     {
         return await this.page.press(selector ,Key)
     }
+    async clearText(selector)
+    {
+         await this.page.press(selector , "Control+A")
+         await this.page.press(selector,"Delete")
+
+
+    }
     async verifyElementText(selector , text)
     {
         const textvalue = await this.page.textContent(selector)
         return await expect(textvalue.tirm()).toBe(text)
     }
+     
     async verifyElementContainText(selector , text)
     {
         const locatortext = await this.page.locator(selector)
@@ -56,7 +66,8 @@ export default class BasePage {
     }
     async verifyUrl(url)
     {
-    const currentURL = this.getUrl()
+    const currentURL = this.page.url()
+    console.log(currentURL);
     return this.expectMethod(currentURL,url)
     }
     async verifyElementEnable(locator,ErrorMessage)
@@ -70,7 +81,12 @@ export default class BasePage {
             throw new Error(`${ErrorMessage}`)
         }
     }
-
+    async verifyTextisVisible(selector)
+    {
+        const element = await this.page.getByText(selector ,{exact :true});
+        expect(element).toBeVisible();
+    }
+    
 }
 
  
