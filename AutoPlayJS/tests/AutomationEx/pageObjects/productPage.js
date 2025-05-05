@@ -1,0 +1,16 @@
+export const cart_icon ='.shopping_cart_link'
+export const filter ='.product_sort_container'
+export const values =['az','za','lohi','hilo'];
+export const side_Menu_icon ='react-burger-menu-btn';
+export const All_Items ='#inventory_sidebar_link';
+export const About ='#about_sidebar_link';
+export const logout ='#logout_sidebar_link';
+export const Reset ='#reset_sidebar_link';
+export const Card ='.inventory_item';
+export const product_name ='.inventory_item_name ';
+export const product_des ='.inventory_item_desc';
+export const product_price ='..inventory_item_price';
+export const add_to_cart_Button ='#add-to-cart-sauce-labs-backpack';
+export const product_image =`//img[@class='inventory_item_img']`;
+
+
