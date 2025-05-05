@@ -1,8 +1,18 @@
 import { expect } from '@playwright/test'
+import { dashboardURL } from '../../../config';
+import {loginButton} from '../pageObjects/loginPage';
 
 export default class BasePage {
     constructor(page) {
         this.page = page
+    }
+    async LoginFunctions(locatorUsername, locatorPassword ,user, pass)
+    {
+        await this.waitAndFill(locatorUsername,user)
+        await this.waitAndFill(locatorPassword,pass)
+        await this.clickMethod(loginButton)
+
+        await this.verifyUrl(dashboardURL)
     }
     async launchUrl(url) {
         return await this.page.goto(url);
@@ -13,7 +23,8 @@ export default class BasePage {
     }
     async verifyitsVisible(selector)
     {
-        const element  = this.page.locator(selector);
+        const element  = this.page.locator(selector)
+        await this.page.waitForTimeout(4000);
         await expect(element).toBeVisible();
     }
     async getUrl()
@@ -26,11 +37,15 @@ export default class BasePage {
     }
     async waitForPageLoad ()
     {
-        return await this.page.waitForLoadState('domcontentloaded')
+        await this.page.waitForLoadState('domcontentloaded')
+
+        await this.page.waitForTimeout(5000);
     }
     async clickMethod(selector)
     {
-
+        console.log(`Waiting for: ${selector}`);
+        await this.page.waitForSelector(selector, { state: 'visible', timeout: 10000 });
+        console.log(`Clicking: ${selector}`);
         return  await this.page.click(selector);
     }
     async waitAndFill(selector , content)
@@ -53,6 +68,11 @@ export default class BasePage {
     {
         const textvalue = await this.page.textContent(selector)
         return await expect(textvalue.tirm()).toBe(text)
+    }
+    async verifyElementSize(locator)
+    {
+        return  await this.page.locator(locator).count();
+       
     }
      
     async verifyElementContainText(selector , text)
@@ -83,8 +103,9 @@ export default class BasePage {
     }
     async verifyTextisVisible(selector)
     {
-        const element = await this.page.getByText(selector ,{exact :true});
+         const element = await this.page.getByText(selector ,{exact :true});
         expect(element).toBeVisible();
+        return element;
     }
     
 }
