@@ -1,6 +1,7 @@
 import { expect } from '@playwright/test'
-import { dashboardURL } from '../../../config';
+import { dashboardURL,screenshotPath } from '../../../config';
 import {loginButton} from '../pageObjects/loginPage';
+
 
 export default class BasePage {
     constructor(page) {
@@ -43,9 +44,7 @@ export default class BasePage {
     }
     async clickMethod(selector)
     {
-        console.log(`Waiting for: ${selector}`);
         await this.page.waitForSelector(selector, { state: 'visible', timeout: 10000 });
-        console.log(`Clicking: ${selector}`);
         return  await this.page.click(selector);
     }
     async waitAndFill(selector , content)
@@ -88,6 +87,7 @@ export default class BasePage {
     {
     const currentURL = this.page.url()
     console.log(currentURL);
+    await this.page.waitForTimeout(4000)
     return this.expectMethod(currentURL,url)
     }
     async verifyElementEnable(locator,ErrorMessage)
@@ -103,9 +103,32 @@ export default class BasePage {
     }
     async verifyTextisVisible(selector)
     {
-         const element = await this.page.getByText(selector ,{exact :true});
+        const element = await this.page.getByText(selector ,{exact :true});
         expect(element).toBeVisible();
         return element;
+    }
+    async getText(selector)
+    {
+        return await this.page.locator(selector).textContent();
+    }
+    async selectByValue(selector ,values)
+    {
+        return await this.page.selectOption(selector,values);
+    }
+    async checkVisibleElement(selector)
+    {
+        return await expect (this.page.locator(selector)).first().toBeVisible();
+    }
+    async takeScreenShot()
+    {
+
+        return await this.page.screenshot({path:screenshotPath+'hilo.png'});
+    }
+    async compareTwoScreenshot()
+    { 
+       // const scot =  await this.page.screenshot();
+        return await expect(this.page).toHaveScreenshot();
+
     }
     
 }

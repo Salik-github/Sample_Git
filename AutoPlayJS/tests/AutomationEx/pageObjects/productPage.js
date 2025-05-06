@@ -14,4 +14,8 @@ export const add_to_cart_Button =`//button[text()='Add to cart']`;
 export const product_image =`//img[@class='inventory_item_img']`;
 export const cardBadge ='.shopping_cart_badge';
 export const backPackAddToCartBtn = '#add-to-cart-sauce-labs-backpack';
-
+export const bikeLightAddToCartBtn = '#add-to-cart-sauce-labs-bike-light';
+export const bolt_tshirtAddToCartBtn = '#add-to-cart-sauce-labs-bolt-t-shirt';
+export const backPackRemoveBtn = '#remove-sauce-labs-backpack';
+export const bikeLightRemoveBtn = '#remove-sauce-labs-bike-light';
+export const bolt_tshirtRemoveBtn = '#remove-sauce-labs-bolt-t-shirt'
