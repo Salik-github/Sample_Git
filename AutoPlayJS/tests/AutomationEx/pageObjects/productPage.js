@@ -9,6 +9,7 @@ export const Reset ='#reset_sidebar_link';
 export const Card ='.inventory_item';
 export const product_name ='.inventory_item_name ';
 export const product_des ='.inventory_item_desc';
+export const firstproductname =`//div[text()='Sauce Labs Backpack']`;
 export const product_price ='.inventory_item_price';
 export const add_to_cart_Button =`//button[text()='Add to cart']`;
 export const product_image =`//img[@class='inventory_item_img']`;

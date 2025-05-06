@@ -14,14 +14,20 @@ export default class productPage extends BasePage {
         var count = await this.verifyElementSize(locator)
         await this.expectMethod(count, size);
     }
-    async verifyElementVisible(selector)
-    {
+    async verifyElementVisible(selector) {
         await this.checkVisibleElement(selector);
     }
     async check_Add_to_Cart_and_Count(selector, count) {
 
         await this.clickMethod(selector);
+        await this.verifycount(count);
+        //await this.expectMethod(await this.getText(cart_icon), count);
+    }
+    async verifycount(count) {
         await this.expectMethod(await this.getText(cart_icon), count);
+    }
+    async add_to_cart_product(selector) {
+        await this.clickMethod(selector);
     }
     async verify_filters_sorting(values) {
         await this.selectByValue(filter, values)
@@ -35,15 +41,14 @@ export default class productPage extends BasePage {
         //     await this.compareTwoScreenshot('hilo.png');
 
         // }
-         await this.takeScreenShot();
+        await this.takeScreenShot();
     }
-    async check_Remove_to_Cart_and_Count(selector, count)
-    {
+    async check_Remove_to_Cart_and_Count(selector, count) {
         await this.clickMethod(selector);
-        await this.expectMethod(await this.getText(cart_icon), count);
+        await this.verifycount(count);
+        // await this.expectMethod(await this.getText(cart_icon), count);
     }
-    async checkViewDescribtion(selector)
-    {
+    async checkViewDescribtion(selector) {
         await this.clickMethod(selector);
         await this.verifyUrl(backpack);
     }
